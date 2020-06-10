@@ -80,3 +80,7 @@ CPU找页表中，改页表项的驻留位为0或未找到改页表项，则发�
 
    ![avatar](pic/3次握手.gif)
    ![avatar](pic/3次握手2gif.gif)
+   
+   ###### 四次挥手流程
+![avatar](pic/4次挥手.gif)
+![avatar](pic/4次挥手2.gif)
