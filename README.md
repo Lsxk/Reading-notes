@@ -66,3 +66,17 @@ CPU找页表中，改页表项的驻留位为0或未找到改页表项，则发�
  
  ###### exec()程序加载
  elh文件头--可执行文件的格式
+ 
+ 
+#### 计算机网络
+ 
+   ###### 三次握手流程
+
+   流程如下两图，主要涉及到状态的变化
+
+   client: 发出syn后变成SYN_Send，收到ack后，变为ESTABLISHED
+
+   server：收到syn后变成SYN_RECV，发出syn+ack。收到ack后变成ESTABLISHED
+
+   ![avatar](pic/3次握手.gif)
+   ![avatar](pic/3次握手2gif.gif)
