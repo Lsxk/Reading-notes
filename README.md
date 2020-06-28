@@ -154,3 +154,7 @@ CPU找页表中，改页表项的驻留位为0或未找到改页表项，则发�
 
 1. server发送了最后一个fin给client后，server变为last-ack，期待client返回最后一个ack，然后closed，但不幸的是，client发送的ack，server没有收到。则这个时候server会重传fin，要确保client在closed之前没有收到这个重传的fin，所有要等待2msl。也就是**client发ack的时间 + server重传的fin时间**
 2. 确保网络中所有报文段失效。
+
+###### leveldb为什么使用跳表
+1. range查找方便
+2. 写入一般较多，如使用B+树等查找树，为了维持平衡，需要很多的旋转操作。
