@@ -9,6 +9,14 @@ pip install cython
 ## 2.环境变量设置
 ```
 export PKG_CONFIG_PATH=/usr/local/Cellar/nss/3.60/lib/pkgconfig
+
+```
+## 3.cmake config
+src/CMakeLists.txt
+```
+#add_subdirectory(lua)
+#test_big_endian(CEPH_BIG_ENDIAN)
+set (CEPH_BIG_ENDIAN FALSE)
 ```
 
 ## 3.cmake options
