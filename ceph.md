@@ -4,11 +4,12 @@
 ```
 brew install llvm
 brew install snappy ccache cmake pkg-config nss
-pip install cython
+pip install cython Sphinx
 ```
 ## 2.环境变量设置
 ```
 export PKG_CONFIG_PATH=/usr/local/Cellar/nss/3.60/lib/pkgconfig
+export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 
 ```
 ## 3.cmake config
