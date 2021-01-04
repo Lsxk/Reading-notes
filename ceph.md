@@ -1,14 +1,18 @@
 # macOs编译ceph
 
 ## 1.安装依赖
+```
 brew install llvm
 brew install snappy ccache cmake pkg-config nss
 pip install cython
-
+```
 ## 2.环境变量设置
+```
 export PKG_CONFIG_PATH=/usr/local/Cellar/nss/3.60/lib/pkgconfig
+```
 
 ## 3.cmake options
+```
 -DBOOST_J=4
 -DCMAKE_C_COMPILER=/usr/local/opt/llvm/bin/clang
 -DCMAKE_CXX_COMPILER=/usr/local/opt/llvm/bin/clang++
@@ -35,3 +39,4 @@ export PKG_CONFIG_PATH=/usr/local/Cellar/nss/3.60/lib/pkgconfig
 -DWITH_FUSE=OFF
 -DWITH_LEVELDB=OFF
 -DWITH_PYTHON3=OFF
+```
