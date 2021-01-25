@@ -171,3 +171,4 @@ CPU找页表中，改页表项的驻留位为0或未找到改页表项，则发�
 2. 写入一般较多，如使用B+树等查找树，为了维持平衡，需要很多的旋转操作。
 
 ###### leveldb major compaction合并delete时，快照数据咋办？
+Snapshot集合在leveldb里面组织成为一个链表，oldest的节点必然最小的snapshot。对于每一个snapshot配备一个sequence number, 所以很明显oldest的节点的sequence number应该是最小的。每次进行compaction的时候会判断当前最小的sequence number 是多少然后将一些不必要的节点删除。另外在查询key的时候也会结合这个snapshot sequence number结合成为一个复合key进行查询。
